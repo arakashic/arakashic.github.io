@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fincalc</title>
+    <script src="./mousetrap.min.js"></script>
+    <script src="./calc.js"></script>
+    <!-- for styling -->
+    <link rel="stylesheet" href="./calc.css" />
+  </head>
+  <!-- create table -->
+  <body>
+    <table border="1">
+      <tr>
+        <td colspan="4"><p id="CalcStatement"/> </p></td>
+        <td><input type="button" id="UtilButton" value="(" onclick="on_button('(')"/> </td>
+      </tr>
+      <tr>
+        <td colspan="4"><p id="CalcEntry"/> </p></td>
+        <td><input type="button" id="UtilButton" value=")" onclick="on_button(')')"/> </td>
+      </tr>
+      <tr>
+        <!-- clr() function will call clr to clear all value -->
+        <td><input type="button" id="UtilButton" value="C" onclick="on_button('C')"/> </td>
+        <td colspan="2"><input id="UtilButton" type="button" value="CE" onclick="on_button('CE')"/> </td>
+        <td><input type="button" value="÷" onclick="on_button('/')"/> </td>
+        <td><input id="FunctionButton" type="button" value="%" onclick="on_button('f_PERCENT')"/> </td>
+      </tr>
+      <tr>
+        <td width="20%"><input id="NumberButton" type="button" value="7" onclick="on_button('7')"/> </td>
+        <td width="20%"><input id="NumberButton" type="button" value="8" onclick="on_button('8')"/> </td>
+        <td width="20%"><input id="NumberButton" type="button" value="9" onclick="on_button('9')"/> </td>
+        <td width="20%"><input type="button" value="×" onclick="on_button('*')"/> </td>
+        <td width="20%"><input id="FunctionButton" type="button" value="√" onclick="on_button('f_SQRT')"/> </td>
+      </tr>
+      <tr>
+        <td><input id="NumberButton" type="button" value="4" onclick="on_button('4')"/> </td>
+        <td><input id="NumberButton" type="button" value="5" onclick="on_button('5')"/> </td>
+        <td><input id="NumberButton" type="button" value="6" onclick="on_button('6')"/> </td>
+        <td><input type="button" value="-" onclick="on_button('-')"/> </td>
+        <td><input id="FunctionButton" type="button" value="x²" onclick="on_button('f_SQR')"/> </td>
+      </tr>
+      <tr>
+        <!-- create button and assign value to each button -->
+        <!-- dis("1") will call function dis to display value -->
+        <td><input id="NumberButton" type="button" value="1" onclick="on_button('1')"/> </td>
+        <td><input id="NumberButton" type="button" value="2" onclick="on_button('2')"/> </td>
+        <td><input id="NumberButton" type="button" value="3" onclick="on_button('3')"/> </td>
+        <td><input type="button" value="+" onclick="on_button('+')"/> </td>
+        <td><input id="FunctionButton" type="button" value="CAGR" onclick="on_button('f_CAGR')"/> </td>
+      </tr>
+      <tr>
+        <td><input id="UtilButton" type="button" value="." onclick="on_button('.')"/> </td>
+        <td><input id="NumberButton" type="button" value="0" onclick="on_button('0')"/> </td>
+        <td><input id="UtilButton" type="button" value="±" onclick="on_button('neg')"/> </td>
+        <!-- solve function call function solve to evaluate value -->
+        <td><input id="EqualButton" type="button" value="=" onclick="on_button('=')"/> </td>
+      </tr>
+    </table>
+  </body>
+</html>
